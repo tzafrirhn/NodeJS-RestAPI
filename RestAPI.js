@@ -14,11 +14,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
     res.json(users)
 });
 
-app.post('/companies', (req, res) => {
+app.get('/api/companies', (req, res) => {
     res.json(companies)
 });
 
