@@ -5,8 +5,8 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-// Where we will keep books
-let books = [];
+// Where we will keep users and companies
+let users = [chtz,user1,yaniv,alex],companies = [Microsoft,eWave,Amazon,eBay,YouTube];
 
 app.use(cors());
 
@@ -14,12 +14,12 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/users', (req, res) => {
-    // We will be coding here
+app.post('/api/users', (req, res) => {
+    res.json(users)
 });
 
-app.post('/companies', (req, res) => {
-    // We will be coding here
+app.post('/api/companies', (req, res) => {
+    res.json(companies)
 });
 
 app.listen(port, () => console.log(`Hello world app listening on port ${port}!`));
