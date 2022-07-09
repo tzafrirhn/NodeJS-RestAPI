@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 // Where we will keep users and companies
-let users = [chtz,user1,yaniv,alex],companies = [Microsoft,eWave,Amazon,eBay,YouTube];
+let users = ['chtz','user1','yaniv','alex'],companies = ['Microsoft','eWave','Amazon','eBay','YouTube'];
 
 app.use(cors());
 
@@ -14,11 +14,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/api/users', (req, res) => {
+app.post('/users', (req, res) => {
     res.json(users)
 });
 
-app.post('/api/companies', (req, res) => {
+app.post('/companies', (req, res) => {
     res.json(companies)
 });
 
