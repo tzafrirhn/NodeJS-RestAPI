@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
+var port = process.env.PORT || 3000;
 
 // Where we will keep users and companies
 let users = ['chtz','user1','yaniv','alex'],companies = ['Microsoft','eWave','Amazon','eBay','YouTube'];
