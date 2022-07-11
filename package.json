@@ -4,7 +4,7 @@
   "description": "",
   "main": "RestAPI.js",
   "scripts": {
-    "test": "echo \"Error: no test specified, Contiue with deployment\" && exit 0"
+    "test": "echo \"Error: no test specified, Continue with deployment\" && exit 0"
   },
   "keywords": [],
   "author": "",
