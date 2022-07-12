@@ -67,15 +67,13 @@ stages:
       runOnce:
         deploy:
           steps:
+          
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'AzureRM'
-              azureSubscription: 'Azure subscription 1(1)(3c51a887-50c8-4b0e-9956-56e13e36478a)'
+              azureSubscription: 'Azure subscription 1(3c51a887-50c8-4b0e-9956-56e13e36478a)'
               appType: 'webAppLinux'
               WebAppName: 'NodeJS-api-server'
-              deployToSlotOrASE: true
-              ResourceGroupName: 'NodeJS-api-server_group'
-              SlotName: 'production'
               packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               RuntimeStack: 'NODE|16-lts'
               StartupCommand: 'npm run start'
