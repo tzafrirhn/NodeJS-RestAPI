@@ -18,14 +18,22 @@ steps:
     npm run build
   displayName: 'npm build'
 
-- task: AzureRmWebAppDeployment@4
+- task: CopyFiles@2
   inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure subscription 1(3c51a887-50c8-4b0e-9956-56e13e36478a)'
-    appType: 'webAppLinux'
-    WebAppName: 'NodeJS-api-server'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'NodeJS-api-server_group'
-    SlotName: 'production'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    RuntimeStack: 'NODE|16-lts'
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents: '*.tgz' 
+    targetFolder: $(Build.ArtifactStagingDirectory)/npm
+  displayName: 'Copy npm package'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents: 'package.json' 
+    targetFolder: $(Build.ArtifactStagingDirectory)/npm
+  displayName: 'Copy package.json'   
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)/npm'
+    artifactName: npm
+  displayName: 'Publish npm artifact'
