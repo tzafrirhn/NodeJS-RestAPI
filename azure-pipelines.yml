@@ -1,7 +1,7 @@
 # Using azure pipelines to build and deploy my api server
 
 trigger:
-- master
+- dev
 
 variables:
 
