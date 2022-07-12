@@ -1,17 +1,27 @@
 {
-  "name": "nodejs",
+  "name": "nodejs-restapi",
   "version": "1.0.0",
-  "description": "",
-  "main": "RestAPI.js",
+  "description": "simple api app",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified, Continue with deployment\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzafrirhn/NodeJS-RestAPI.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "API",
+    "AZURE"
+  ],
+  "author": "chtz",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tzafrirhn/NodeJS-RestAPI/issues"
+  },
+  "homepage": "https://github.com/tzafrirhn/NodeJS-RestAPI#readme",
   "dependencies": {
-    "body-parser": "^1.20.0",
-    "cors": "^2.8.5",
     "express": "^4.18.1"
   }
 }
