@@ -75,3 +75,4 @@ stages:
               WebAppName: 'NodeJS-api-server'
               packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               RuntimeStack: 'NODE|16-lts'
+              StartupCommand: 'npm run start'
