@@ -3,7 +3,7 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
-// Where we will keep users and companies
+// save data for JSON
 let users = ['chtz','user1','yaniv','alex'],companies = ['Microsoft','eWave','Amazon','eBay','YouTube'];
 
 app.get('/', (req, res) => {
