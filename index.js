@@ -1,7 +1,6 @@
-var express = require("express");
-var app = express();
-
-var port = process.env.PORT || 3000;
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 3000
 
 // save data for JSON
 let users = ['chtz','user1','yaniv','alex'],companies = ['Microsoft','eWave','Amazon','eBay','YouTube'];
