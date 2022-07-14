@@ -3,8 +3,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // save data for JSON
-let users = ['Chen','Linus','Yaniv','Yossi'];
-let companies = ['Microsoft','eWave','Amazon','eBay','YouTube','Netflix'];
+let users = ['Chen','Linus','Yaniv','Yossi','ABC'];
+let companies = ['Microsoft','eWave','Amazon','eBay','YouTube','Netflix','Spotify'];
 
 app.get('/', (req, res) => {
     res.send(`Hello World, from Express server ver. 1.0 <br> listening on port ${port}!`);
