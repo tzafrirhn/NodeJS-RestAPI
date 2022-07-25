@@ -20,4 +20,7 @@ app.get('/api/companies', (req, res) => {
     res.json(companies)
 });
 
-app.listen(port, () => console.log(`Server is listening on port ${port}!`));
+
+let server=app.listen(port, () => console.log(`Server is listening on port ${port}!`));
+
+module.exports = server;
