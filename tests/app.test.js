@@ -33,7 +33,6 @@ describe('companies endpoint', () => {
 		const response = await request(app).get('/api/companies');
 
 		expect(response.statusCode).toBe(200);
-		console.log(response.statuscode);
 		expect(response.body).toMatchObject(
 		["Microsoft", "eWave", "Amazon", "eBay", "YouTube", "Netflix", "Spotify"])
 	});
