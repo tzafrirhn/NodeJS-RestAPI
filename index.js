@@ -32,6 +32,8 @@ router.post('/api/addusers/:user', (req, res) => {
     users.push(req.params.user)
     res.json(users)
 });
+
+
 // add new company to json array
 router.post('/api/addcompanies/:company', (req, res) => {
     companies.push(req.params.company)
