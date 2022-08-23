@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 // save data for JSON
 let users = ['Chen','Linus','Yaniv','Yossi','ABC'];
-let companies = ['Microsoft','eWave','Amazon','eBay','YouTube','Netflix','Spotify','abc'];
+let companies = ['Microsoft','eWave','Amazon','eBay','YouTube','Netflix','Spotify'];
 
 app.get('/', (req, res) => {
     res.send({message: `Hello World, from Express server ver. 1.0, listening on port ${port}!`});
