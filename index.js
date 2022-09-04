@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// save data for JSON
+// define data for JSON
 let users = ['Chen','Linus','Yaniv','Yossi','ABC'];
 let companies = ['Microsoft','eWave','Amazon','eBay','YouTube','Netflix','Spotify'];
 
@@ -37,7 +37,10 @@ router.post('/api/addusers/:user', (req, res) => {
 // add new company to json array
 router.post('/api/addcompanies/:company', (req, res) => {
     companies.push(req.params.company)
-    res.json(companies)
+    return res.status(201).json({
+        companies,
+        error: null,
+      });
 });
 
 // delete last user from json array
