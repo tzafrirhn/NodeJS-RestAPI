@@ -1,0 +1,67 @@
+{
+	"variables": [],
+	"info": {
+		"name": "test nodejs",
+		"_postman_id": "b9dadcf2-73cc-575d-037f-d104bc689ed0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Your test name\"] = jsonData.value === 100;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://nodejsnewman.azurewebsites.net/api/addusers/xyz",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"url": "https://nodejsnewman.azurewebsites.net/api/delete/users",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete company",
+			"request": {
+				"url": "https://nodejsnewman.azurewebsites.net/api/delete/companies",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add company",
+			"request": {
+				"url": "https://nodejsnewman.azurewebsites.net/api/addcompanies/newCompany",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
